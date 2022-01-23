@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property> <!--Dialecto para la conexión-->
+        <property name="hbm2ddl.auto">create</property><!--como se va a comportar Hibernate con la bbdd-->
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/m06</property>
+       
+        <property name="connection.username">ilerna</property><!--Usuario con el que nos vamos a conectar-->
+        <property name="connection.password">Ilerna_1234</property><!--contraseña del usuario conectar-->
+
+        <!--Mapeo de los ficheros de configuración para cada una de las clases-->
+
+        <mapping resource="alumno.hbm.xml"/>
+        <mapping resource="profesor.hbm.xml"/>
+        <mapping resource="modulo.hbm.xml"/>
+
+
+    </session-factory>
+</hibernate-configuration>
